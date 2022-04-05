@@ -1,3 +1,6 @@
-﻿public interface IService
+﻿namespace TestTask.Services
 {
+    public interface IService
+    {
+    }
 }

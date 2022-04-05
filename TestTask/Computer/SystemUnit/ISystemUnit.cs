@@ -1,7 +1,10 @@
-﻿public interface ISystemUnit
+﻿namespace TestTask.Computer.SystemUnit
 {
-    void Power(bool isActive);
-    void Reboot(int delay);
+    public interface ISystemUnit
+    {
+        void Power(bool isActive);
+        void Reboot(int delay);
     
     
+    }
 }

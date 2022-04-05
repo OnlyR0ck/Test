@@ -1,4 +1,9 @@
-﻿public interface IComputer
+﻿using TestTask.Computer.OperatingSystem;
+
+namespace TestTask.Computer
 {
-    IOperatingSystem OperatingSystem { get; }
+    public interface IComputer
+    {
+        IOperatingSystem OperatingSystem { get; }
+    }
 }

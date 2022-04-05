@@ -2,13 +2,8 @@
 
 namespace TestTask.Services.MouseInput
 {
-    public interface IMouseInputService : IService
+    public interface IInputService : IService
     {
         Vector2 GetInput();
-    }
-
-    public class TouchInputService : IMouseInputService
-    {
-        
     }
 }

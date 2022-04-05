@@ -15,10 +15,7 @@ namespace TestTask.Computer.SystemUnit
             };
         }
 
-        public override void CheckComponents()
-        {
-            
-        }
+        public override bool CheckComponents() => new Random().Next(0, 10) > 5;
 
         public override void AddComponent<TComponent>(IMotherBoardComponent component) =>
             components.Add(typeof(TComponent), component);

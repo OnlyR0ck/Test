@@ -6,14 +6,12 @@ namespace TestTask.Commands
     {
         public Action onComplete;
     
-        public virtual void Execute()
-        {
-        
-        }
+        public void Execute() => HandleStart();
 
-        public virtual void Cancel()
-        {
-        
-        }
+        public void Cancel() => HandleCancel();
+
+
+        protected abstract void HandleStart();
+        protected abstract void HandleCancel();
     }
 }

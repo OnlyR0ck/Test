@@ -1,4 +1,9 @@
-﻿public interface ICommand
+﻿namespace TestTask.Commands
 {
-    public void Execute();
+    public interface ICommand
+    {
+        public void Execute();
+
+        public void Cancel();
+    }
 }

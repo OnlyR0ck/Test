@@ -3,6 +3,6 @@
     public interface IStore
     {
         void ShowGoods();
-        void SoldGood(string id);
+        void SellGood(string id);
     }
 }

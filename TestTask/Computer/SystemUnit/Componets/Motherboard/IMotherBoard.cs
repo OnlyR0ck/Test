@@ -4,7 +4,7 @@ namespace TestTask.Computer.SystemUnit
 {
     public interface IMotherBoard
     {
-        void CheckComponents();
+        bool CheckComponents();
 
         void AddComponent<TComponent>(IMotherBoardComponent component);
     }

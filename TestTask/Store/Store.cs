@@ -8,7 +8,7 @@ namespace TestTask.Computer
      через паттерны семейства MVX - был опыт работы с MVC, MVVM на JavaFx, C# 
     */
     
-    public class Store
+    public class Store : IStore
     {
         private List<ISaleable> goods;
         private float cash;
@@ -30,7 +30,7 @@ namespace TestTask.Computer
             }
         }
 
-        public void SoldGood(string id)
+        public void SellGood(string id)
         {
             ISaleable good = FindItemById(id);
             cash += good.GetPrice();

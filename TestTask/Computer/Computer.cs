@@ -1,13 +1,30 @@
-﻿public class Computer :  IComputer
+﻿using System;
+using TestTask.Computer.OperatingSystem;
+using TestTask.Computer.SystemUnit;
+
+namespace TestTask.Computer
 {
-    private readonly ISystemUnit systemUnit;
-
-    public IOperatingSystem OperatingSystem { get; set; }
-    
-
-    public Computer(IOperatingSystem operatingSystem, ISystemUnit systemUnit)
+    public class Computer :  IComputer, ISaleable
     {
-        OperatingSystem = operatingSystem;
-        this.systemUnit = systemUnit;
+        private readonly ISystemUnit systemUnit;
+
+        public IOperatingSystem OperatingSystem { get; }
+        
+        public string Id { get; private set; }
+
+
+
+        public Computer(IOperatingSystem operatingSystem, ISystemUnit systemUnit)
+        {
+            OperatingSystem = operatingSystem;
+            this.systemUnit = systemUnit;
+            
+            Id = Guid.NewGuid().ToString();
+        }
+
+        public float GetPrice() => int.MaxValue;
+        
+
+        public string GetCharacteristics() => string.Empty;
     }
 }
