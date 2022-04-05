@@ -4,7 +4,7 @@ using TestTask.Computer;
 
 namespace TestTask.Recycler
 {
-    public class Recycler
+    public class Recycler : IRecycler
     {
 
         private readonly List<IComputer> savedComputers;
